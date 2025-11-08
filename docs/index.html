@@ -49,360 +49,88 @@
 
  -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jie Wu - Professional Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 20px;
-            overflow: hidden;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            color: #3498db;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .title {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            color: white;
-            background: rgba(255, 255, 255, 0.2);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-            font-size: 1.8rem;
-        }
-        
-        .intro {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            text-align: justify;
-        }
-        
-        .work-experience {
-            margin-top: 30px;
-        }
-        
-        .job {
-            display: flex;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            background: #f8f9fa;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        
-        .job:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .company-logo {
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
-            font-size: 30px;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .baidu-logo {
-            background: linear-gradient(135deg, #2932e1 0%, #1a21a8 100%);
-        }
-        
-        .sensetime-logo {
-            background: linear-gradient(135deg, #ff6b00 0%, #e85100 100%);
-        }
-        
-        .job-details {
-            flex: 1;
-        }
-        
-        .job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        
-        .company-name {
-            font-size: 1.1rem;
-            color: #3498db;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .job-period {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
-        
-        .job-description {
-            color: #555;
-        }
-        
-        .education {
-            margin-top: 40px;
-        }
-        
-        .education-item {
-            display: flex;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-        
-        .education-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #3498db;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-            color: white;
-            font-size: 20px;
-        }
-        
-        .education-details {
-            flex: 1;
-        }
-        
-        .education-degree {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        
-        .education-school {
-            font-size: 1rem;
-            color: #3498db;
-            margin-bottom: 5px;
-        }
-        
-        .education-period {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            .job {
-                flex-direction: column;
-            }
-            
-            .company-logo {
-                margin-right: 0;
-                margin-bottom: 15px;
-                align-self: center;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Jie Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1.5rem;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .center {
+      text-align: center;
+    }
+    .company-logo {
+      width: 20px;
+      height: 20px;
+      border-radius: 0;
+      display: inline-block;
+      margin: 0 8px 0 0;
+      vertical-align: middle;
+    }
+    .work-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .work-logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      border-radius: 4px;
+    }
+    .work-content {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="profile-img">
-                <i class="fas fa-user"></i>
-            </div>
-            <h1>Jie Wu</h1>
-            <div class="title">Senior Researcher - Video Generation Specialist</div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-            </div>
-        </header>
-        
-        <div class="content">
-            <section class="intro">
-                <h2>About Me</h2>
-                <p>Hi, I'm now a senior researcher at VIS Group of Baidu, working on real-time and efficient video generation. Previously, I spent three wonderful years at the Base Model Group of SenseTime Research, mentored by <a href="https://scholar.google.com/citations?user=-zEM0ycAAAAJ&hl=zh-CN&oi=ao">Boxiao Liu</a>, <a href="https://songguanglu.github.io">Guanglu Song</a>, and <a href="https://liuyu.us">Yu Liu</a>. We focus on the development of large-scale AIGC models and their applications.</p>
-                <p>I received my Master's degree in 2023 from the School of Computer Science at Sichuan University, supervised by <a href="https://yn-sun.github.io/">Prof. Yanan Sun</a> and focused on the design of vision foundation model based on Neural Architecture Search (NAS). <a href="https://scholar.google.com.hk/citations?user=ePiYDkAAAAAJ&hl=zh-CN">[google scholar]</a></p>
-            </section>
-            
-            <section class="work-experience">
-                <h2>Work Experience</h2>
-                
-                <div class="job">
-                    <div class="company-logo baidu-logo">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="job-details">
-                        <div class="job-title">Senior Researcher</div>
-                        <div class="company-name">VIS Group of Baidu</div>
-                        <div class="job-period">October 2025 – Present</div>
-                        <div class="job-description">
-                            <p>Working on real-time and efficient video generation technologies. Leading research projects focused on advancing video synthesis capabilities using cutting-edge AI techniques.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="job">
-                    <div class="company-logo sensetime-logo">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="job-details">
-                        <div class="job-title">Researcher</div>
-                        <div class="company-name">Base Model Group of SenseTime Research</div>
-                        <div class="job-period">July 2023 – June 2025</div>
-                        <div class="job-description">
-                            <p>Contributed to the development of large-scale AIGC models and their applications. Worked on foundational AI research with a focus on scalable model architectures.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="job">
-                    <div class="company-logo sensetime-logo">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="job-details">
-                        <div class="job-title">Research Intern</div>
-                        <div class="company-name">Base Model Group of SenseTime Research</div>
-                        <div class="job-period">February 2022 – July 2023</div>
-                        <div class="job-description">
-                            <p>Began my professional journey in AI research, focusing on neural architecture search and foundation model development under the guidance of experienced mentors.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="education">
-                <h2>Education</h2>
-                
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-details">
-                        <div class="education-degree">Master of Computer Science</div>
-                        <div class="education-school">Sichuan University</div>
-                        <div class="education-period">2020 - 2023</div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-        <footer>
-            <p>© 2023 Jie Wu. All Rights Reserved.</p>
-        </footer>
-    </div>
+  <img src="img/me.JPG" alt="Profile Photo">
+  <h1>Jie Wu</h1>
+  <p class="center">
+    Hi, I'm now a senior researcher at VIS Group of Baidu, working on real-time and efficient video generation. Previously, I spent three wonderful years at the Base Model Group of SenseTime Research, mentored by <a href="https://scholar.google.com/citations?user=-zEM0ycAAAAJ&hl=zh-CN&oi=ao">Boxiao Liu</a>, <a href="https://songguanglu.github.io">Guanglu Song</a>, and <a href="https://liuyu.us">Yu Liu</a>. We focuse on the development of large-scale AIGC models and their applications.
+    I received my Master’s degree in 2023 from the School of Computer Science at Sichuan University, supervised by <a href="https://yn-sun.github.io/">Prof. Yanan Sun</a> and focused on the design of vision foundation model based on Neural Architecture Search (NAS). <a href="https://scholar.google.com.hk/citations?user=ePiYDkAAAAAJ&hl=zh-CN">[google scholar]</a>
+  </p>
 
-    <script>
-        // 添加简单的动画效果
-        document.addEventListener('DOMContentLoaded', function() {
-            const jobs = document.querySelectorAll('.job');
-            
-            jobs.forEach((job, index) => {
-                job.style.opacity = '0';
-                job.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    job.style.transition = 'all 0.5s ease';
-                    job.style.opacity = '1';
-                    job.style.transform = 'translateY(0)';
-                }, 200 * index);
-            });
-        });
-    </script>
+  <h2>Work Experience</h2>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li class="work-item">
+      <img src="img/baidu-logo.png" alt="Baidu Logo" class="work-logo">
+      <div class="work-content">
+        <strong>Senior Researcher</strong> VIS Group of Baidu (October 2025 – present)
+      </div>
+    </li>
+    <li class="work-item">
+      <img src="img/sensetime-logo.png" alt="SenseTime Logo" class="work-logo">
+      <div class="work-content">
+        <strong>Researcher</strong> Base Model Group of SenseTime Research (July 2023 – June 2025)
+      </div>
+    </li>
+    <li class="work-item">
+      <img src="img/sensetime-logo.png" alt="SenseTime Logo" class="work-logo">
+      <div class="work-content">
+        <strong>Research Intern</strong> Base Model Group of SenseTime Research (Feb 2022 – July 2023)
+      </div>
+    </li>
+  </ul>
 </body>
 </html>
+
